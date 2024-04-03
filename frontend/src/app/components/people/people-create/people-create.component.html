@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Nova Pessoa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="people.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="number" matInput placeholder="CPF"
+                [(ngModel)]="people.cpf" name="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date" matInput placeholder="Data Nascimento" name="data_nasc" 
+                [(ngModel)]="people.data_nasc">
+        </mat-form-field>
+
+        <button mat-raised-button (click)="createPeople()" color="primary">
+            Salvar
+        </button>
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </form>
+</mat-card>

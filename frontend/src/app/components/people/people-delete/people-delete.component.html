@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Excluir Pessoa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [value]="people.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="number" matInput placeholder="CPF"
+                [value]="people.cpf" name="cpf" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date" matInput placeholder="Data Nascimento" name="data_nasc" 
+                [value]="people.data_nasc" disabled>
+        </mat-form-field>
+
+        <button mat-raised-button (click)="deletePeople()" color="primary">
+            Atualizar
+        </button>
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </form>
+</mat-card>
